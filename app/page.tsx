@@ -3,8 +3,105 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, TrendingUp, RotateCcw, Building2 } from "lucide-react";
+import { ArrowRight, TrendingUp, RotateCcw, Building2, ChevronDown } from "lucide-react";
 import { calculateEligibility, storeLoanData, type LoanData, type EligibilityResult } from "../lib/calculateEligibility";
+
+// FAQ data
+const faqData = [
+  {
+    question: "What are the eligibility criteria for a personal loan in New Zealand?",
+    answer: "Typically, you must be at least 18 years old, be a New Zealand resident or hold a valid work visa, have a regular income, and meet the lender's affordability and credit-worthiness checks."
+  },
+  {
+    question: "What is the difference between secured and unsecured personal loans?",
+    answer: "A secured personal loan is backed by an asset (such as a car or property), which the lender can use to recover funds if you default. An unsecured loan does not require security, but typically carries a higher interest rate and possibly lower lending amount."
+  },
+  {
+    question: "How much can I borrow and what loan terms are available?",
+    answer: "Loan amounts and terms vary by lender and your personal situation. For example, some personal loans in NZ offer terms from 1 year up to 7 years, with amounts depending on your income, credit history and whether security is provided."
+  },
+  {
+    question: "What interest rates and fees apply to personal loans in New Zealand?",
+    answer: "Interest rates for personal loans can range widely (for instance from ~8% to near 30% p.a.) depending on your credit profile, loan size, term and whether the loan is secured. Additional fees may include establishment fees, early repayment fees or default fees."
+  },
+  {
+    question: "Can I apply for a personal loan if I'm self-employed or have a poor credit history?",
+    answer: "Yes — many lenders accept applications from self-employed borrowers or individuals with poor credit, but you may need to provide more documentation (e.g., tax returns, business income) and you may face higher interest rates or stricter terms."
+  },
+  {
+    question: "How long does it take to get a decision on a personal loan application?",
+    answer: "The time varies by lender and your completeness of documentation, but many lenders in New Zealand aim to make a decision within 24-48 hours once you've submitted all required information."
+  },
+  {
+    question: "What happens if I miss loan repayments or fall into financial hardship?",
+    answer: "If you miss repayments your credit record may be negatively affected and you could incur late or default fees. It's important to contact your lender as soon as possible — some lenders will work with you on repayment plans if you are facing hardship."
+  },
+  {
+    question: "Can I repay my personal loan early and is there a penalty?",
+    answer: "Many lenders allow early repayment of a personal loan, but you should check the terms: some may charge an early‐settlement fee or rebate interest differently."
+  },
+  {
+    question: "What documentation will I need when applying for a personal loan?",
+    answer: "You'll typically need photo ID (passport or driver licence), proof of address, proof of income (payslips, bank statements or business accounts if self‐employed), and possibly details of your existing debts."
+  },
+  {
+    question: "What should I consider before taking out a personal loan?",
+    answer: "You should evaluate your borrowing need, check you can comfortably afford the repayments, compare interest rates and fees between lenders, and read the fine print about terms, early repayment options and default consequences. Borrowing more than you need or for regular living expenses may lead to financial stress."
+  }
+];
+
+// FAQ Accordion Component
+function FAQAccordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className="space-y-4">
+      {faqData.map((faq, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="border border-gray-200 rounded-xl overflow-hidden"
+        >
+          <button
+            onClick={() => toggleAccordion(index)}
+            className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-between"
+          >
+            <span className="font-semibold text-[#0B3C6F] text-lg pr-4">
+              {faq.question}
+            </span>
+            <ChevronDown
+              className={`w-5 h-5 text-[#E11D48] transition-transform duration-200 flex-shrink-0 ${
+                openIndex === index ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+          
+          <motion.div
+            initial={false}
+            animate={{
+              height: openIndex === index ? 'auto' : 0,
+              opacity: openIndex === index ? 1 : 0
+            }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="px-6 py-4 bg-white border-t border-gray-100">
+              <p className="text-gray-700 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
 
 export default function LoanEligibilityPage() {
   const [mounted, setMounted] = useState(false);
@@ -417,6 +514,19 @@ export default function LoanEligibilityPage() {
               <Building2 className="w-5 h-5" />
             </motion.button>
           </Link>
+        </motion.div>
+
+        {/* FAQ Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="bg-white rounded-3xl shadow-lg p-8 mt-8"
+        >
+          <h2 className="text-3xl font-bold text-[#0B3C6F] text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <FAQAccordion />
         </motion.div>
 
         {/* AdSense Placeholder */}
