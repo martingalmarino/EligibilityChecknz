@@ -174,7 +174,7 @@ export default function ImproveScore() {
     } else {
       setPersonalizedTips(allTips);
     }
-  }, [allTips]);
+  }, []);
 
   const generatePersonalizedTips = (data: any) => {
     const tips = [...allTips];
@@ -366,14 +366,14 @@ export default function ImproveScore() {
                   localStorage.removeItem('loanEligibility');
                 }
               }}
-              className="bg-white text-[#E11D48] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
+              className="bg-white text-[#E11D48] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
             >
               <RotateCcw className="w-5 h-5" />
               Retake Calculator
             </Link>
             <Link
               href="/compare-lenders"
-              className="bg-white/20 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/30 transition-colors flex items-center gap-2"
+              className="bg-white/20 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/30 transition-colors flex items-center gap-2 justify-center"
             >
               <Building2 className="w-5 h-5" />
               Compare Lenders
