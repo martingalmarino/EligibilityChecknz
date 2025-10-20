@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Head from "next/head";
 import { 
   ArrowLeft, 
   DollarSign, 
@@ -229,13 +228,7 @@ export default function ImproveScore() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Improve Your Loan Score | Personal Finance Tips NZ | LoanFinderNZ</title>
-        <meta name="description" content="Learn how to improve your loan eligibility score in New Zealand. Get personalized tips for better income, credit rating, debt management and more." />
-        <link rel="canonical" href="https://www.loanfindernz.com/improve-score" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
+    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
       {/* Header */}
       <div className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-6">
@@ -446,7 +439,6 @@ export default function ImproveScore() {
           </div>
         </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
