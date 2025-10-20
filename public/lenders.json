@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Harmoney",
+    "logo": "/logos/harmoney.svg",
+    "rateFrom": "8.99%",
+    "rateTo": "24.99%",
+    "range": "$2,000–$70,000",
+    "approval": "Fast digital approval",
+    "url": "https://www.harmoney.co.nz/",
+    "type": "fintech",
+    "eligibilityNotes": "Good to excellent credit, 18+ NZ resident",
+    "minScoreNeeded": 50
+  },
+  {
+    "name": "Kiwibank",
+    "logo": "/logos/kiwibank.svg",
+    "rateFrom": "11.95%",
+    "rateTo": "18.95%",
+    "range": "$3,000–$40,000",
+    "approval": "Same-day pre-approval",
+    "url": "https://www.kiwibank.co.nz/personal-banking/loans/personal-loans/",
+    "type": "bank",
+    "eligibilityNotes": "NZ citizen or resident, 18+",
+    "minScoreNeeded": 70
+  },
+  {
+    "name": "ANZ Bank",
+    "logo": "/logos/anz.svg",
+    "rateFrom": "12.90%",
+    "rateTo": "19.90%",
+    "range": "$3,000–$50,000",
+    "approval": "1–2 business days",
+    "url": "https://www.anz.co.nz/personal/loans/",
+    "type": "bank",
+    "eligibilityNotes": "Stable income, no recent defaults",
+    "minScoreNeeded": 65
+  },
+  {
+    "name": "BNZ",
+    "logo": "/logos/bnz.svg",
+    "rateFrom": "13.45%",
+    "rateTo": "20.95%",
+    "range": "$1,000–$30,000",
+    "approval": "Instant pre-approval online",
+    "url": "https://www.bnz.co.nz/support/personal-loans/",
+    "type": "bank",
+    "eligibilityNotes": "Resident, proof of income",
+    "minScoreNeeded": 60
+  },
+  {
+    "name": "Westpac NZ",
+    "logo": "/logos/westpac.svg",
+    "rateFrom": "13.45%",
+    "rateTo": "22.95%",
+    "range": "$3,000–$50,000",
+    "approval": "Manual assessment",
+    "url": "https://www.westpac.co.nz/personal-loans/",
+    "type": "bank",
+    "eligibilityNotes": "Employed or stable self-employment",
+    "minScoreNeeded": 55
+  },
+  {
+    "name": "Finance Now",
+    "logo": "/logos/financenow.svg",
+    "rateFrom": "10.95%",
+    "rateTo": "27.95%",
+    "range": "$1,000–$60,000",
+    "approval": "Instant pre-approval",
+    "url": "https://www.financenow.co.nz/personal-loans/",
+    "type": "non-bank",
+    "eligibilityNotes": "Employed, valid NZ bank account",
+    "minScoreNeeded": 50
+  },
+  {
+    "name": "Avanti Finance",
+    "logo": "/logos/avanti.svg",
+    "rateFrom": "10.50%",
+    "rateTo": "26.00%",
+    "range": "$1,000–$40,000",
+    "approval": "1 business day",
+    "url": "https://www.avantifinance.co.nz/",
+    "type": "non-bank",
+    "eligibilityNotes": "Some defaults accepted, NZ resident",
+    "minScoreNeeded": 45
+  },
+  {
+    "name": "Instant Finance",
+    "logo": "/logos/instant.svg",
+    "rateFrom": "9.95%",
+    "rateTo": "25.95%",
+    "range": "$1,000–$25,000",
+    "approval": "Same-day approval",
+    "url": "https://instantfinance.co.nz/",
+    "type": "non-bank",
+    "eligibilityNotes": "Steady job, 18+, NZ bank account",
+    "minScoreNeeded": 45
+  },
+  {
+    "name": "Simplify Loans",
+    "logo": "/logos/simplify.svg",
+    "rateFrom": "12.99%",
+    "rateTo": "28.99%",
+    "range": "$1,000–$20,000",
+    "approval": "Online form, 24h response",
+    "url": "https://simplifyloans.co.nz/",
+    "type": "broker",
+    "eligibilityNotes": "Alternative lender network",
+    "minScoreNeeded": 40
+  },
+  {
+    "name": "Nectar NZ",
+    "logo": "/logos/nectar.svg",
+    "rateFrom": "9.95%",
+    "rateTo": "25.95%",
+    "range": "$2,000–$30,000",
+    "approval": "Fast digital process",
+    "url": "https://www.nectar.co.nz/",
+    "type": "fintech",
+    "eligibilityNotes": "NZ resident, income proof",
+    "minScoreNeeded": 55
+  }
+]

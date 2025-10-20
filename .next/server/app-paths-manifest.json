@@ -1,0 +1,5 @@
+{
+  "/improve-score/page": "app/improve-score/page.js",
+  "/compare-lenders/page": "app/compare-lenders/page.js",
+  "/page": "app/page.js"
+}
