@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Head from "next/head";
 import { ArrowLeft, Building2, ExternalLink, Info } from "lucide-react";
 import { getLoanData, type Lender } from "../../lib/calculateEligibility";
 
@@ -61,7 +62,13 @@ export default function CompareLenders() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
+    <>
+      <Head>
+        <title>Compare NZ Lenders | Personal Loan Rates & Eligibility | LoanFinderNZ</title>
+        <meta name="description" content="Compare personal loan lenders in New Zealand. Find the best rates and eligibility requirements from ANZ, Westpac, BNZ, Kiwibank and more based on your loan score." />
+        <link rel="canonical" href="https://www.loanfindernz.com/compare-lenders" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
       {/* Header */}
       <div className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-6">
@@ -217,6 +224,7 @@ export default function CompareLenders() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

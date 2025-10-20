@@ -460,7 +460,7 @@ export default function LoanEligibilityPage() {
             </div>
             <div className="pt-6 border-t border-white/20">
               <p className="text-white/60 text-sm">
-                © 2025 LoanEligibilityCheck.nz. All rights reserved.
+                © 2025 loanfindernz.com. All rights reserved.
               </p>
             </div>
           </motion.div>
