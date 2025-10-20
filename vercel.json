@@ -1,0 +1,16 @@
+{
+  "name": "loan-eligibility-check-nz",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "regions": ["syd1"],
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install"
+}

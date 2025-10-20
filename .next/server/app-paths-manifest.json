@@ -1,5 +1,6 @@
 {
-  "/improve-score/page": "app/improve-score/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
   "/compare-lenders/page": "app/compare-lenders/page.js",
-  "/page": "app/page.js"
+  "/improve-score/page": "app/improve-score/page.js"
 }
