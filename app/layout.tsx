@@ -8,6 +8,24 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  verification: {
+    google: "MvpmBQnAmgWmMLDKmatVYTUtiy3_MXYBlHn0H6MG4OM",
+  },
+  metadataBase: new URL('https://www.loanfindernz.com'),
+  alternates: {
+    canonical: 'https://www.loanfindernz.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
